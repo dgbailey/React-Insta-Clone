@@ -1,0 +1,33 @@
+.post-cont{
+    
+    margin:30px;
+    border-radius: 5px;
+    width:600px;
+    border:1px solid lightgray;
+    border-radius:3px;
+
+}
+
+.banner-list{
+    display:flex;
+    align-items: center;
+   
+
+}
+
+.banner{
+    margin:10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+img.thumz {
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+}
+
+
+.primary-img{
+    width:100%;
+}

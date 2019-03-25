@@ -1,5 +1,30 @@
 .comment-cont{
-    width:950px;
-    border:1px solid lightgray;
-    height:900px;
+    width:598px;
+    margin:10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.emotion-btns{
+    display:flex;
+   flex-direction: column;
+    width:598px;
+    
+}
+
+.e-btn-container{
+    display: flex;
+}
+
+.emotion-stats{
+    text-align:left;
+    
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.e-btn-container button{
+    border:none;
+    margin-bottom: 5px;
+    width:38px;
 }

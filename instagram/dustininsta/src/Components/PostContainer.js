@@ -8,14 +8,16 @@ const PostContainer = (props) =>{
         <div className='post-cont'>
             <div className='post-banner'>
                 <ul className='banner-list'>
-                    <li className='banner-img'><img src={props.thumb} alt=''></img></li>
-                    <li className='banner-profile-name'>{props.username}</li>
+                    <li className='banner bimg'>
+                        <img className='thumz' src={props.thumb} alt=''></img>
+                    </li>
+                    <li className='banner bprofile-name'>{props.username}</li>
                 </ul>
             </div>
             <div className='img-cont'>
-                <img src={props.mainImg} alt=''></img>
+                <img className='primary-img' src={props.mainImg} alt=''></img>
             </div>
-            <CommentSection/>
+            <CommentSection likes={props.likes} timestamp={props.timestamp} comments={props.comments}/>
         
         </div>
 
