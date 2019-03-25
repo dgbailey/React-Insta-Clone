@@ -1,6 +1,8 @@
 import React from 'react';
 
-const CommentSection = ()=> {
+import './CommentSection.css';
+
+const CommentSection = (props)=> {
     return(
         <div className='comment-cont'>
             <div className='emotion-btns'>
@@ -13,10 +15,10 @@ const CommentSection = ()=> {
             </div>
 
             <div className='text-array-cont'>
-                <Comment/>
+                
             </div>
             <div className='add-comment-cont'>
-                <button className='commentBtn'>Add a comment ...</button>
+                <input className='commentBtn' placeholder='Add a comment ...'></input>
             </div>
 
         </div>
