@@ -20,9 +20,10 @@ class App extends Component {
     return (
       <div className="App">
         <Searchbar/>
-        {this.state.masterData.map( currentPost => 
+        {this.state.masterData.map( (currentPost, index) => 
       
             <PostContainer 
+            key= {index} 
             username={currentPost.username} 
             thumb={currentPost.thumbnailUrl} 
             mainImg={currentPost.imageUrl} 
