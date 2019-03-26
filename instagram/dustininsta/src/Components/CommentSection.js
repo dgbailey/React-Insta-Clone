@@ -15,6 +15,7 @@ class CommentSection extends Component {
             comments:this.props.comments,
             index:this.props.key,
             comment:'',
+            emotionstats:this.props.likes
             
         }
        
@@ -48,16 +49,20 @@ class CommentSection extends Component {
 
         
     }
+
+    incrementLikes = () =>{
+        this.setState({emotionstats:this.state.emotionstats +1})
+    }
     render(){
         return(
             <div className='comment-cont'>
                 <div className='emotion-btns'>
                     <ul className='e-btn-container'>
-                    <li><button className='like'><i className="far fa-heart"></i></button></li>
+                    <li><button className='like' onClick={this.incrementLikes}><i className="far fa-heart"></i></button></li>
                         <li><button className='comment'><i className="far fa-comment"></i></button></li>
                         
                     </ul>
-                    <div className='emotion-stats'>{this.props.likes} likes</div>
+                    <div className='emotion-stats'>{this.state.emotionstats} likes</div>
                     
                 </div>
 
