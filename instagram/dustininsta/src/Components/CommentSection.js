@@ -67,8 +67,9 @@ class CommentSection extends Component {
                 </div>
 
                 <div className='text-array-cont'>
-                    {this.state.comments.map( currentComment => 
+                    {this.state.comments.map((currentComment,index) => 
                     <Comment 
+                    key={index} 
                     username={currentComment.username} 
                     text={currentComment.text} 
                     timestamp={this.props.timestamp} 
