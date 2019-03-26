@@ -17,9 +17,9 @@ const Searchbar = (props) => {
             </li>
             <li className='nav-items'>
                 <ul className='mini-nav'>
-                    <li className='mini one'><i class="far fa-compass"></i></li>
-                    <li className='mini two'><i class="far fa-heart"></i></li>
-                    <li className='mini three'><i class="far fa-user"></i></li>
+                    <li className='mini one'><i className="far fa-compass"></i></li>
+                    <li className='mini two'><i className="far fa-heart"></i></li>
+                    <li className='mini three'><i className="far fa-user"></i></li>
                 </ul>
             </li>
             

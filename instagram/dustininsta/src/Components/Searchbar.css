@@ -20,11 +20,20 @@
     
 }
 
+.asset{
+    padding:0px 10px;
+}
 .one img {
     height: 34px;
-    border-left: 1px solid black;
+    
    
 }
+
+.one{
+    border-left: 1px solid black;
+    height:30px
+}
+
 
 input{
     background: #f7f4f4;

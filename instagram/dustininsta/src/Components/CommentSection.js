@@ -1,15 +1,17 @@
 import React from 'react';
 
 import Comment from './Comment';
+
 import './CommentSection.css';
+import PropTypes from 'prop-types';
 
 const CommentSection = (props)=> {
     return(
         <div className='comment-cont'>
             <div className='emotion-btns'>
                 <ul className='e-btn-container'>
-                <li><button className='like'><i class="far fa-heart"></i></button></li>
-                    <li><button className='comment'><i class="far fa-comment"></i></button></li>
+                <li><button className='like'><i className="far fa-heart"></i></button></li>
+                    <li><button className='comment'><i className="far fa-comment"></i></button></li>
                     
                 </ul>
                 <div className='emotion-stats'>{props.likes} likes</div>
@@ -28,6 +30,17 @@ const CommentSection = (props)=> {
 
         </div>
     )
+}
+
+CommentSection.propTypes = {
+    timestamp:PropTypes.string,
+    comments:PropTypes.arrayOf(
+        PropTypes.shape({
+            username:PropTypes.number,
+            text:PropTypes.string
+        })
+    )
+    
 }
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CommentSection from './CommentSection';
 
 import './PostContainer.css';
@@ -22,6 +23,17 @@ const PostContainer = (props) =>{
         </div>
 
         
+    )
+}
+
+PostContainer.propTypes = {
+    likes:PropTypes.number,
+    timestamp:PropTypes.string,
+    comments:PropTypes.arrayOf(
+        PropTypes.shape({
+            username:PropTypes.string,
+            text:PropTypes.string
+        })
     )
 }
 
