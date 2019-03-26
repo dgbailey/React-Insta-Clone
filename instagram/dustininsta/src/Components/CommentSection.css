@@ -1,0 +1,64 @@
+.comment-cont{
+    font-family: 'Open Sans', sans-serif;
+    margin:10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.emotion-btns{
+    display:flex;
+   flex-direction: column;
+    
+    
+}
+
+.e-btn-container{
+    display: flex;
+}
+
+.emotion-stats{
+    text-align:left;
+    
+    font-size: 14px;
+    margin:4px;
+    font-weight: bold;
+}
+
+.e-btn-container button{
+    border:none;
+    margin-bottom: 5px;
+    width:38px;
+}
+
+.timestamp{
+    
+    font-size:14px;
+    margin: 10px 0px;
+    font-weight: bold;
+   
+}
+
+.add-comment-cont{
+   
+    padding-top:10px;
+    width:100%;
+    border-top: 1px solid lightgray;
+}
+
+.commentBtn{
+    background: none;
+    text-align:left;
+    font-family: 'Open Sans', sans-serif;
+    color:lightgray;
+    height:40px;
+    
+}
+
+.like{
+    background: none;
+    margin-left:-10px;
+}
+
+.comment{
+    background: none;
+}
