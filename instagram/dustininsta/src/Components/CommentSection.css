@@ -20,7 +20,7 @@
     text-align:left;
     
     font-size: 14px;
-    margin:2px;
+    margin:4px;
     font-weight: bold;
 }
 
@@ -33,19 +33,25 @@
 .timestamp{
     
     font-size:14px;
+    margin:10px;
     font-weight: bold;
-    border-bottom:1px solid lightgray;
+   
 }
 
 .add-comment-cont{
    
     padding-top:10px;
     width:100%;
+    border-top: 1px solid lightgray;
 }
 
 .commentBtn{
     background: none;
     text-align:left;
+    font-family: 'Open Sans', sans-serif;
+    color:lightgray;
+    height:40px;
+    
 }
 
 .like{
