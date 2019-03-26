@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import data from './dummy-data';
 
 import Searchbar from './Components/Searchbar';
@@ -11,7 +11,7 @@ class App extends Component {
     super();
 
     this.state = {
-      masterData:data
+      masterData:[]
     }
   }
 
@@ -39,6 +39,10 @@ class App extends Component {
         
       </div>
     );
+  }
+
+  componentDidMount(){
+    this.setState({masterData:data});
   }
 }
 
