@@ -45,6 +45,8 @@ class App extends Component {
   componentDidMount(){
     this.setState({masterData:data});
   }
+
+  
 }
 
 export default App;

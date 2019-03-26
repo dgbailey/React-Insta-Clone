@@ -9,10 +9,44 @@ import { Component } from 'react';
 class CommentSection extends Component {
     constructor(props){
         super(props);
-    
+        
+        
         this.state ={
-            comments:this.props.comments
+            comments:this.props.comments,
+            index:this.props.key,
+            comment:'',
+            
         }
+       
+    }
+
+    addNewComment = (event,postIndex)=>{
+        event.preventDefault();
+        const newcomment = {text:this.state.comment,
+            username:'testuser_'}
+
+        this.setState(
+            
+            {comments:[...this.state.comments,newcomment]
+            }
+        )
+        this.setState(
+            
+            {comment:''
+            }
+        )
+
+        
+        // this.setState({comments:})
+    }
+
+    handleChanges = (event) =>{
+    
+        this.setState(
+          {comment: event.target.value}
+        )
+
+        
     }
     render(){
         return(
@@ -28,13 +62,24 @@ class CommentSection extends Component {
                 </div>
 
                 <div className='text-array-cont'>
-                    {this.state.comments.map( currentComment => <Comment 
-                    username={currentComment.username} text={currentComment.text} timestamp={this.props.timestamp}/>)}
+                    {this.state.comments.map( currentComment => 
+                    <Comment 
+                    username={currentComment.username} 
+                    text={currentComment.text} 
+                    timestamp={this.props.timestamp} 
+                    
+                    />)}
+                   
                     
                 </div>
                 <p className='timestamp'>{this.props.timestamp}</p>
                 <div className='add-comment-cont'>
-                    <input className='commentBtn' placeholder='Add a comment ...'></input>
+                    <form id='comment-form' onSubmit={this.addNewComment}>
+                        <input className='commentBtn' 
+                        value={this.state.comment}
+                        placeholder='Add a comment ...' 
+                        onChange={this.handleChanges} ></input>
+                    </form>
                 </div>
 
             </div>
@@ -46,7 +91,7 @@ CommentSection.propTypes = {
     timestamp:PropTypes.string,
     comments:PropTypes.arrayOf(
         PropTypes.shape({
-            username:PropTypes.number,
+            username:PropTypes.string,
             text:PropTypes.string
         })
     )

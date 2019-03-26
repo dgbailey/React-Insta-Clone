@@ -18,7 +18,7 @@ const PostContainer = (props) =>{
             <div className='img-cont'>
                 <img className='primary-img' src={props.mainImg} alt=''></img>
             </div>
-            <CommentSection likes={props.likes} timestamp={props.timestamp} comments={props.comments}/>
+            <CommentSection likes={props.likes} timestamp={props.timestamp} comments={props.comments} key={props.key}/>
         
         </div>
 
