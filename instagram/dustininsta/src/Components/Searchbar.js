@@ -12,8 +12,12 @@ const Searchbar = (props) => {
                 
             </li>
             <li className='search-field'>
-                <input
-                placeholder='Search'></input>
+                <form className='searchform' onChange={() => props.searchResults(props.searchtext)}>
+                    <input
+                    value={props.searchtext}
+                    onChange={props.handleSearchChanges}
+                    placeholder='Search'></input>
+                </form>
             </li>
             <li className='nav-items'>
                 <ul className='mini-nav'>

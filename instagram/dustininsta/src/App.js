@@ -11,7 +11,8 @@ class App extends Component {
     super();
 
     this.state = {
-      masterData:[]
+      masterData:[],
+      searchtext:''
     }
   }
 
@@ -19,7 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Searchbar/>
+        <Searchbar searchtext={this.state.searchtext} 
+        searchResults={this.searchResults}
+        handleSearchChanges ={this.handleSearchChanges}/>
         {this.state.masterData.map( (currentPost, index) => 
       
             <PostContainer 
@@ -46,6 +49,28 @@ class App extends Component {
     this.setState({masterData:data});
   }
 
+  searchResults = (text) =>{
+    
+    console.log('this is my text',text);
+    const results = data.filter(currentValue => currentValue.username.includes(text));
+    
+    if(text === ''){
+      this.setState({masterData:data})
+    }
+    this.setState({masterData:results});
+    
+  }
+  handleSearchChanges = (event) =>{
+    
+    this.setState(
+      {searchtext: event.target.value}
+    )
+    this.setState(
+      {searchtext: event.target.value}
+    )
+
+    
+}
   
 }
 
