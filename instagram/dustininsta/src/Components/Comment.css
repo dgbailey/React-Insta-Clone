@@ -3,22 +3,28 @@
     width:800px;
     display:flex;
     flex-direction: row;
-
+    justify-content: flex-start;
+    font-size: 14px;
+    
 }
 
-
+.cont{
+    margin:3px;
+}
 
 .username{
-    width:20px;
+    
     font-weight: bold;
-    margin-right: 3px;
+    margin-right: 0px;
+    margin-right:5px;
 }
 
 
 .text{
     width:400px;
-    border:1px solid black;
+    
 }
 .timestamp{
     color:lightgray;
 }
+

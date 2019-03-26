@@ -3,10 +3,10 @@ import './Comment.css';
 
 const Comment = (props) =>{
     return(
-    <ul className='comment-cont'>
-        <li className='username'>{props.username}</li>
-        <li className='text'>{props.text}</li>
-        <li className='timestamp'>{props.timestamp}</li>
+    <ul className='i-comment-cont'>
+        <li className='cont username'>{props.username}</li>
+        <li className='cont text'>{props.text}</li>
+        
 
     
     </ul>

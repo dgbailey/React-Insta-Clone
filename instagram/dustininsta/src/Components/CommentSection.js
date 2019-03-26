@@ -8,10 +8,11 @@ const CommentSection = (props)=> {
         <div className='comment-cont'>
             <div className='emotion-btns'>
                 <ul className='e-btn-container'>
+                <li><button className='like'><i class="far fa-heart"></i></button></li>
                     <li><button className='comment'><i class="far fa-comment"></i></button></li>
-                    <li><button className='like'><i class="far fa-heart"></i></button></li>
+                    
                 </ul>
-                <div className='emotion-stats'>{props.likes}</div>
+                <div className='emotion-stats'>{props.likes} likes</div>
                 
             </div>
 
@@ -20,6 +21,7 @@ const CommentSection = (props)=> {
                 username={currentComment.username} text={currentComment.text} timestamp={props.timestamp}/>)}
                 
             </div>
+            <p className='timestamp'>{props.timestamp}</p>
             <div className='add-comment-cont'>
                 <input className='commentBtn' placeholder='Add a comment ...'></input>
             </div>
