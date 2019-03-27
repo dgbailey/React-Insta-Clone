@@ -4,13 +4,13 @@ import data from './dummy-data';
 import Searchbar from './Components/Searchbar';
 import PostContainer from './Components/PostContainer';
 
-const PostsPage = ({allstate,searchResults,handleSearchChanges}) => {
+const PostsPage = (props) => {
     return(
         <div className='posts-page-cont'>
-            <Searchbar searchtext={allstate.searchtext} 
-            searchResults={searchResults}
-            handleSearchChanges ={handleSearchChanges}/>
-            {allstate.masterData.map( (currentPost, index) => 
+            <Searchbar searchtext={props.allstate.searchtext} 
+            searchResults={props.searchResults}
+            handleSearchChanges ={props.handleSearchChanges}/>
+            {props.allstate.masterData.map( (currentPost, index) => 
         
                 <PostContainer 
                 key= {index} 

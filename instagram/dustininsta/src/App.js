@@ -5,7 +5,12 @@ import data from './dummy-data';
 // import Searchbar from './Components/Searchbar';
 // import PostContainer from './Components/PostContainer';
 import PostsPage from './PostsPage';
+import Login from '../src/Components/Login';
+import withAuthenticate from './Components/authentication/withAuthentication';
 import './App.css';
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
+console.log(withAuthenticate);
 
 class App extends Component {
   constructor(){
@@ -18,33 +23,16 @@ class App extends Component {
   }
 
 
+
   render() {
     return (
       <div className="App">
-        <PostsPage allstate={this.state} 
-        searchResults={this.searchResults}
-        handleSearchChanges ={this.handleSearchChanges}/>
+  
+        <ComponentFromWithAuthenticate allstate={this.state} 
+        searchResults={this.searchResults} 
+        handleSearchChanges ={this.handleSearchChanges}
+        />
 
-        {/* <Searchbar searchtext={this.state.searchtext} 
-        searchResults={this.searchResults}
-        handleSearchChanges ={this.handleSearchChanges}/>
-        {this.state.masterData.map( (currentPost, index) => 
-      
-            <PostContainer 
-            key= {index} 
-            username={currentPost.username} 
-            thumb={currentPost.thumbnailUrl} 
-            mainImg={currentPost.imageUrl} 
-            likes={currentPost.likes} 
-            timestamp={currentPost.timestamp}
-            comments={currentPost.comments}
-            />
-          )
-          
-          
-        } */}
-        
-        
         
       </div>
     );
@@ -75,8 +63,9 @@ class App extends Component {
     )
 
     
-}
+
   
+  }
 }
 
 export default App;

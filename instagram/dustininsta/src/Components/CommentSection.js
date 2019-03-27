@@ -26,7 +26,7 @@ class CommentSection extends Component {
     addNewComment = (event,postIndex)=>{
         event.preventDefault();
         const newcomment = {text:this.state.comment,
-            username:'testuser_'}
+            username:localStorage.getItem('username')}
 
         this.setState(
             
