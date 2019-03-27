@@ -1,0 +1,60 @@
+.login-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:ghostwhite;
+    height:500px;
+    width:300px;
+    margin:0px auto;
+    margin-top:100px;
+    margin-bottom: 100px;
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    border-radius: 5px;
+}
+
+.loginform{
+    
+    width:200px;
+    margin:5px;
+    border-radius: 2px;
+}
+input{
+    border-radius: 2px;
+    background:#ffb3b3;
+    color:black;
+    border:none;
+    width:100%;
+    height:30px;
+    font-size: 10px;
+    
+}
+
+.username{
+    font-weight: normal;
+}
+
+.submitLogin{
+    width: 200px;
+    margin-top:10px;
+    background: #270069;
+
+    border-style: none;
+
+    border-radius: 3px;
+    font-size: 12px;
+    padding:5px;
+    font-weight: bold;
+    color:white;
+}
+.submitLogin:hover{
+    cursor: pointer;
+    opacity: .75;
+}
+
+.logologin img{
+    width:200px;
+}

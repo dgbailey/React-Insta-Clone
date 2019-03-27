@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import instalogo from '../assets/Instagram_simple_icon.svg';
+import instatext from '../assets/Instagram_logo.svg';
 import './Login.css';
 
 class Login extends Component{
@@ -27,12 +28,15 @@ class Login extends Component{
     render(){
         return(
             <div className='login-container'>
-                <form className='username'>
+                <div className='logologin'><img src={instatext}/></div>
+                <form className='loginform username'>
                     <input className='username'
+                    placeholder='username'
                     onChange={this.handleChanges}></input>
                 </form>
-                <form className='password'>
-                    <input className='password'></input>
+                <form className='loginform password'>
+                    <input className='password'
+                    placeholder='password'></input>
                 </form>
                 <button className='submitLogin'
                         onClick={this.login}
