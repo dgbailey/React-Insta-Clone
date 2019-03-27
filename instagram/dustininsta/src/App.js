@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import data from './dummy-data';
 
 import Searchbar from './Components/Searchbar';
@@ -11,7 +11,8 @@ class App extends Component {
     super();
 
     this.state = {
-      masterData:data
+      masterData:[],
+      searchtext:''
     }
   }
 
@@ -19,10 +20,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Searchbar/>
-        {this.state.masterData.map( currentPost => 
+        <Searchbar searchtext={this.state.searchtext} 
+        searchResults={this.searchResults}
+        handleSearchChanges ={this.handleSearchChanges}/>
+        {this.state.masterData.map( (currentPost, index) => 
       
             <PostContainer 
+            key= {index} 
             username={currentPost.username} 
             thumb={currentPost.thumbnailUrl} 
             mainImg={currentPost.imageUrl} 
@@ -40,6 +44,34 @@ class App extends Component {
       </div>
     );
   }
+
+  componentDidMount(){
+    this.setState({masterData:data});
+  }
+
+  searchResults = (text) =>{
+    
+    console.log('this is my text',text);
+    const results = data.filter(currentValue => currentValue.username.includes(text));
+    
+    if(text === ''){
+      this.setState({masterData:data})
+    }
+    this.setState({masterData:results});
+    
+  }
+  handleSearchChanges = (event) =>{
+    
+    this.setState(
+      {searchtext: event.target.value}
+    )
+    this.setState(
+      {searchtext: event.target.value}
+    )
+
+    
+}
+  
 }
 
 export default App;
