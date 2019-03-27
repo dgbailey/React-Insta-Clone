@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import data from './dummy-data';
 
-import Searchbar from './Components/Searchbar';
-import PostContainer from './Components/PostContainer';
+// import Searchbar from './Components/Searchbar';
+// import PostContainer from './Components/PostContainer';
+import PostsPage from './PostsPage';
 import './App.css';
 
 class App extends Component {
@@ -20,7 +21,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Searchbar searchtext={this.state.searchtext} 
+        <PostsPage allstate={this.state} 
+        searchResults={this.searchResults}
+        handleSearchChanges ={this.handleSearchChanges}/>
+
+        {/* <Searchbar searchtext={this.state.searchtext} 
         searchResults={this.searchResults}
         handleSearchChanges ={this.handleSearchChanges}/>
         {this.state.masterData.map( (currentPost, index) => 
@@ -37,7 +42,7 @@ class App extends Component {
           )
           
           
-        }
+        } */}
         
         
         
