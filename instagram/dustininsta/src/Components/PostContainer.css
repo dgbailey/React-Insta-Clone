@@ -16,21 +16,22 @@
 .banner-list{
     display:flex;
     align-items: center;
+    margin:10px;
    
 
 }
 
-.banner{
+/* .banner{
     margin:10px;
     font-weight: bold;
     font-size: 15px;
-}
+} */
 
-img.thumz {
+/* img.thumz {
     height:50px;
     width:50px;
     border-radius: 50%;
-}
+} */
 
 
 .primary-img{
