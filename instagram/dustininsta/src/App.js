@@ -42,12 +42,13 @@ class App extends Component {
     this.setState({masterData:data});
   }
 
-  searchResults = (text) =>{
+  searchResults = () =>{
     
-    console.log('this is my text',text);
-    const results = data.filter(currentValue => currentValue.username.includes(text));
     
-    if(text === ''){
+   
+    const results = data.filter(currentValue => currentValue.username.includes(this.state.searchtext));
+    console.log(this.state.searchtext)
+    if(this.state.searchtext === ''){
       this.setState({masterData:data})
     }
     this.setState({masterData:results});
@@ -58,9 +59,9 @@ class App extends Component {
     this.setState(
       {searchtext: event.target.value}
     )
-    this.setState(
-      {searchtext: event.target.value}
-    )
+    // this.setState(
+    //   {searchtext: event.target.value}
+    // )
 
     
 
