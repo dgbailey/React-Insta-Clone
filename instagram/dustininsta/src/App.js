@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-  
+    
         <ComponentFromWithAuthenticate allstate={this.state} 
         searchResults={this.searchResults} 
         handleSearchChanges ={this.handleSearchChanges}
