@@ -1,8 +1,14 @@
-.post-global-container{
+
+.post-global-container:first-child{
     margin-top: 80px;
 
 
 }
+.post-global-container{
+    margin-top: 5px;
+
+}
+
 .post-cont{
     
     margin:0px auto;

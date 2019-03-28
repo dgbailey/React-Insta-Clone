@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import data from './dummy-data';
-
+import './PostsPage.css';
 import Searchbar from './Components/Searchbar';
 import PostContainer from './Components/PostContainer';
 
@@ -11,20 +11,21 @@ const PostsPage = (props) => {
             searchResults={props.searchResults}
             handleSearchChanges ={props.handleSearchChanges}
             logOut={props.logOut}/>
-            {props.allstate.masterData.map( (currentPost, index) => 
-        
-                <PostContainer 
-                key= {index} 
-                username={currentPost.username} 
-                thumb={currentPost.thumbnailUrl} 
-                mainImg={currentPost.imageUrl} 
-                likes={currentPost.likes} 
-                timestamp={currentPost.timestamp}
-                comments={currentPost.comments}
-                />
-                )
-            }
+            <div className='posts-cont-for-fixed'>
+                {props.allstate.masterData.map( (currentPost, index) => 
             
+                    <PostContainer 
+                    key= {index} 
+                    username={currentPost.username} 
+                    thumb={currentPost.thumbnailUrl} 
+                    mainImg={currentPost.imageUrl} 
+                    likes={currentPost.likes} 
+                    timestamp={currentPost.timestamp}
+                    comments={currentPost.comments}
+                    />
+                    )
+                }
+            </div>
             
      
              
