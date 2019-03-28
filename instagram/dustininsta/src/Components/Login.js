@@ -49,6 +49,8 @@ const LoginContainer = styled.div`
     padding:25px;
 `
 
+//end styled components begin class component
+
 class Login extends Component{
     constructor(){
         super();

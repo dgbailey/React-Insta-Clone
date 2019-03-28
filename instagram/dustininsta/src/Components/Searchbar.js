@@ -3,9 +3,24 @@ import './Searchbar.css';
 import instalogo from '../assets/Instagram_simple_icon.svg';
 import instatext from '../assets/Instagram_logo.svg';
 
+import styled, { css } from 'styled-components';
+
+
+//start components
+
+const Header = styled.header`
+    position:fixed;
+    width: 100%;
+    height:80px;
+    z-index: 2;
+    margin-top: -85px;
+    background: white;
+
+`
+
 const Searchbar = (props) => {
     return(
-        <div className='global-search-cont'>
+        <Header>
             <ul className='search-cont'>
                 <li className='asset-cont'>
                     <div className='asset two'><img src={instalogo}></img></div>
@@ -29,7 +44,7 @@ const Searchbar = (props) => {
                 </li>
                 
             </ul>
-        </div>
+        </Header>
     )
 }
 
