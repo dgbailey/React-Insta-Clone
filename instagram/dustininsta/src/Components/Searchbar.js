@@ -48,7 +48,7 @@ const MiniNav = styled.ul`
 
 const NavItem = styled.li`
     background: ${props => props.logout ? '#d9ffec' : 'none'}
-    padding: ${props => props.logout ? '3px' : 'none'}
+    padding-top: ${props => props.logout ? '3px' : 'none'}
     border-radius: ${props => props.logout ? '5px' : 'none'}
     cursor: ${props => props.logout ? 'pointer' : 'none'}
     &:hover{
