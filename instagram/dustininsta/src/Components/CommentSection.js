@@ -15,8 +15,10 @@ class CommentSection extends Component {
             comments:this.props.comments,
             index:this.props.key,
             comment:'',
-            emotionstats:this.props.likes
+            emotionstats:this.props.likes,
+            date:Date.now(),
             
+        
         }
        
     }
@@ -24,7 +26,7 @@ class CommentSection extends Component {
     addNewComment = (event,postIndex)=>{
         event.preventDefault();
         const newcomment = {text:this.state.comment,
-            username:'testuser_'}
+            username:localStorage.getItem('username')}
 
         this.setState(
             
@@ -50,9 +52,9 @@ class CommentSection extends Component {
         
     }
 
-    incrementLikes = () =>{
-        this.setState({emotionstats:this.state.emotionstats +1})
-    }
+    incrementLikes = (state,props) => {
+        this.setState({emotionstats:this.state.emotionstats +1})}
+    
     render(){
         return(
             <div className='comment-cont'>

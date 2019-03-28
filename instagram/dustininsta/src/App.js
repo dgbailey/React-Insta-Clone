@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import data from './dummy-data';
 
-import Searchbar from './Components/Searchbar';
-import PostContainer from './Components/PostContainer';
+// import Searchbar from './Components/Searchbar';
+// import PostContainer from './Components/PostContainer';
+import PostsPage from './PostsPage';
+import Login from '../src/Components/Login';
+import withAuthenticate from './Components/authentication/withAuthentication';
 import './App.css';
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
+console.log(withAuthenticate);
 
 class App extends Component {
   constructor(){
@@ -17,29 +23,16 @@ class App extends Component {
   }
 
 
+
   render() {
     return (
       <div className="App">
-        <Searchbar searchtext={this.state.searchtext} 
-        searchResults={this.searchResults}
-        handleSearchChanges ={this.handleSearchChanges}/>
-        {this.state.masterData.map( (currentPost, index) => 
-      
-            <PostContainer 
-            key= {index} 
-            username={currentPost.username} 
-            thumb={currentPost.thumbnailUrl} 
-            mainImg={currentPost.imageUrl} 
-            likes={currentPost.likes} 
-            timestamp={currentPost.timestamp}
-            comments={currentPost.comments}
-            />
-          )
-          
-          
-        }
-        
-        
+  
+        <ComponentFromWithAuthenticate allstate={this.state} 
+        searchResults={this.searchResults} 
+        handleSearchChanges ={this.handleSearchChanges}
+        />
+
         
       </div>
     );
@@ -49,12 +42,13 @@ class App extends Component {
     this.setState({masterData:data});
   }
 
-  searchResults = (text) =>{
+  searchResults = () =>{
     
-    console.log('this is my text',text);
-    const results = data.filter(currentValue => currentValue.username.includes(text));
     
-    if(text === ''){
+   
+    const results = data.filter(currentValue => currentValue.username.includes(this.state.searchtext));
+    console.log(this.state.searchtext)
+    if(this.state.searchtext === ''){
       this.setState({masterData:data})
     }
     this.setState({masterData:results});
@@ -65,13 +59,14 @@ class App extends Component {
     this.setState(
       {searchtext: event.target.value}
     )
-    this.setState(
-      {searchtext: event.target.value}
-    )
+    // this.setState(
+    //   {searchtext: event.target.value}
+    // )
 
     
-}
+
   
+  }
 }
 
 export default App;
