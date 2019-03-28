@@ -9,7 +9,8 @@ const PostsPage = (props) => {
         <div className='posts-page-cont'>
             <Searchbar searchtext={props.allstate.searchtext} 
             searchResults={props.searchResults}
-            handleSearchChanges ={props.handleSearchChanges}/>
+            handleSearchChanges ={props.handleSearchChanges}
+            logOut={props.logOut}/>
             {props.allstate.masterData.map( (currentPost, index) => 
         
                 <PostContainer 

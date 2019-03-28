@@ -31,6 +31,7 @@ class App extends Component {
         <ComponentFromWithAuthenticate allstate={this.state} 
         searchResults={this.searchResults} 
         handleSearchChanges ={this.handleSearchChanges}
+        logOut={this.logOut}
         />
 
         
@@ -42,6 +43,10 @@ class App extends Component {
     this.setState({masterData:data});
   }
 
+  logOut =() => {
+    localStorage.setItem('username','');
+    window.location.reload()
+  }
   searchResults = () =>{
     
     
