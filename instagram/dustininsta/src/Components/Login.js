@@ -29,6 +29,12 @@ class Login extends Component{
         return(
             <div className='login-container'>
                 <div className='logologin'><img src={instatext}/></div>
+                <h2 className='login-header-description'>Log in to see photos and videos from your friends.</h2>
+                <div className='decor-container'>
+                    <span className='decor'></span>
+                    <span className='small-logo'><img className='login-cam-logo' src={instalogo}></img></span>
+                    <span className='decor'></span>
+                </div>
                 <form className='loginform username'>
                     <input className='username'
                     placeholder='username'
@@ -40,7 +46,7 @@ class Login extends Component{
                 </form>
                 <button className='submitLogin'
                         onClick={this.login}
-                        >Submit</button>
+                        >Log In</button>
                 
                 
             </div>
