@@ -68,11 +68,11 @@ const Searchbar = (props) => {
                 
                 <SearchField>
                     
-                    <form className='searchform' onChange={() => props.searchResults()}>
+                    <form className='searchform'>
 
                         <input
                         value={props.searchtext}
-                        onChange={props.handleSearchChanges}
+                        onChange={(e)=>{props.handleSearchChanges(e);props.searchResults(props.searchtext)}}
                         placeholder='Type to search'></input>
                     </form>
                 </SearchField>

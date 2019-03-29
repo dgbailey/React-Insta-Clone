@@ -43,6 +43,8 @@ class App extends Component {
     this.setState({masterData:data});
   }
 
+
+
   logOut =() => {
     localStorage.setItem('username','');
     window.location.reload()
@@ -53,7 +55,7 @@ class App extends Component {
    
     const results = data.filter(currentValue => currentValue.username.includes(this.state.searchtext));
     console.log(this.state.searchtext)
-    if(this.state.searchtext === ''){
+    if(this.state.searchtext ==''){
       this.setState({masterData:data})
     }
     this.setState({masterData:results});
@@ -62,8 +64,10 @@ class App extends Component {
   handleSearchChanges = (event) =>{
     
     this.setState(
-      {searchtext: event.target.value}
+      {searchtext: event.target.value},this.searchResults
     )
+
+    
     // this.setState(
     //   {searchtext: event.target.value}
     // )
