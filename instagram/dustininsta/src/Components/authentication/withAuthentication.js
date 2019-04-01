@@ -22,7 +22,8 @@ const withAuthenticate = App => Login =>
             if(this.state.loggedin){
             return <App allstate={this.props.allstate} 
             searchResults={this.props.searchResults}
-            handleSearchChanges ={this.props.handleSearchChanges}/>}
+            handleSearchChanges ={this.props.handleSearchChanges}
+            logOut={this.props.logOut}/>}
             
             return <Login/>
         }

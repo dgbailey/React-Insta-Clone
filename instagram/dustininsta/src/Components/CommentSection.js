@@ -6,6 +6,9 @@ import './CommentSection.css';
 import PropTypes from 'prop-types';
 import { Component } from 'react';
 
+import styled, { css } from 'styled-components';
+import UserName from './styles/reusables/UserName';
+
 class CommentSection extends Component {
     constructor(props){
         super(props);
